@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 
 def comb(L):
-    for a in range(0, 9):
-        for b in range0, 9):
-            if a != b:
-                print(str(a) + str(b))
+    for a in range(0, 10):
+        for b in range(a + 1, 10):
+            if a == 8 and b == 9:
+                print("{}{}".format(a, b))
+            else:
+                print("{}{}".format(a, b), end=", ")
