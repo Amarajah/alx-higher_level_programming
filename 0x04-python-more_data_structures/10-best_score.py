@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    Keymax = max(zip(a_dictionary.values(), a_dictionary.keys()))[1]
-    return Keymax
+    keymax = max(zip(a_dictionary.values(), a_dictionary.keys()))[1]
+    return keymax
