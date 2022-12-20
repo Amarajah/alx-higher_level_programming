@@ -13,9 +13,6 @@ class Square:
         """ Sets the size attribute."""
         self.__size = size
 
-        """Create an instance of the Square class with a size of 5."""
-        s1 = Square(5)
-        print(f'The square has a size of {s1._Square.__size}')
 
         """Try creating a square with size 'a'(TypeError)."""
         try:
