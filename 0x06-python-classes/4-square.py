@@ -8,6 +8,14 @@ class Square:
     """Represent a square."""
     def __init__(self, size=0):
         """ Sets the size attribute."""
+        self.size = size
+
+    @property
+    def size(self):
+        return self._size
+
+    @size.setter
+    def size(self, value):
 
         """Check if size is an integer."""
 
@@ -17,10 +25,4 @@ class Square:
         """Check if size is less than 0."""
 
         if size < 0:
-            raise ValueError('size must be >= 0')
-
-        self.__size = size
-
-    def area(self):
-        """Gets the area of the square."""
-        return (self.__size * self.__size)
+            raise ValueError('size must be > 0')
