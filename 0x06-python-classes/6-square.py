@@ -71,12 +71,26 @@ class Square:
         if self.size == 0:
             print(" ")  # print an empty line
         else:
+            for i in range(self.position[1]):
+                print(" ")
             for i in range(self.size):
-                for line in range(self.position[1]):
-                    print(" ")
-            for i in range(self.__size):
-                for space in range(self.position[0]):
+                for j in range(self.position[0]):
                     print(" ", end=" ")
                 for j in range(self.size):
                     print('#', end=" ")
                 print(" ")
+
+    def __str__(self):
+        string = ''
+        if self.size == 0:
+            string += '\n'
+        else:
+            for i in range(self.position[1]):
+                string += '\n'
+            for i in range(self.size):
+                for j in range(self.position[0]):
+                    string += ' '
+                for j in range(self.size):
+                    string += '#'
+                string += '\n'
+        return string
