@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 
+import sys
+
 
 def safe_print_integer_err(value):
-    if isinstance(value, int):
-        return True
-    else:
-        return False
-
     try:
         print("{:d}".format(value), end=" ")
-    except TypeError:
-        print("Exception: {} is not an integer".format(value))
+        return True
+    except ValueError:
+        print("Exception: {} is not an integer".format(value), file=sys.stderr)
+        return False
