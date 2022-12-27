@@ -7,6 +7,6 @@ def safe_print_integer(value):
         return True
 
     try:
-        print("{:d}".format(value), end=" ")
+        print("{:d}".format(value), end="\n")
     except ValueError:
         print(" ")
