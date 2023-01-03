@@ -13,6 +13,13 @@ class Rectangle:
         self.__width = width
         self.__height = height
 
+    @property
+    def width(self):
+
+        """Returns value of width."""
+        return self._width
+
+    @width.setter
     def width(self, value):
 
         """Defines the width attribute, and checks its an integer."""
@@ -27,6 +34,13 @@ class Rectangle:
 
     self.__width = width
 
+    @property
+    def height(self):
+
+        """Returns value of height."""
+        return self._height
+
+    @height.setter
     def height(self, value):
 
         """Defines height attribute,and checks its an  integer."""
