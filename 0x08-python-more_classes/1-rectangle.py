@@ -26,7 +26,7 @@ class Rectangle:
 
         """If its not an int/less than 0, raise error."""
 
-    if not isinstance(width, int):
+    if not isinstance(value, int):
         raise TypeError('width must be an integer')
 
     if width < 0:
@@ -47,7 +47,7 @@ class Rectangle:
 
         """If its not an int/less than 0, raise error."""
 
-        if not isinstance(height, int):
+        if not isinstance(value, int):
             raise TypeError('height must be an integer')
 
         if height < 0:
