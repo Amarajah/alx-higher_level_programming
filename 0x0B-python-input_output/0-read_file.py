@@ -4,5 +4,5 @@
 
 def read_file(filename=""):
     '''Opens and reads file using with statement.'''
-    with open("", encoding="utf-8") as f:
+    with open(filename, encoding="utf-8") as f:
         print(f.read(), end="")
