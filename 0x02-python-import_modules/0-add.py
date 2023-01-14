@@ -9,5 +9,6 @@ def sum():
     add(a, b)
     print("{:d} + {:d} = {:d}".format(a, b, (add(a, b))))
 
+
 if __name__ == "__main__":
     sum()
