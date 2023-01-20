@@ -6,42 +6,30 @@ Function that divides all elements of a matrix.
 
 
 def matrix_divided(matrix, div):
-    """
-    Checks that matrix contains actual numbers.
-
-    """
-    if not isinstance(matrix, list) for row in matrix
-            or not all(isinstance(row, list) for row in matrix):
-        raise TypeError('matrix must be a matrix
-                (list of lists) of integers/floats')
-    """
-    Checks that matrix contains numbers.
-
-    """
-    if not all(isinstance(element, (int, float))
-            for row in matrix for element in row):
-        raise TypeError('matrix must be a matrix
-                 (list of lists) of integers/floats')
-    """
-    Checks that all rows are of the same size.
-
-    """
-    if not all(len(row) == len(matrix[0]) for row in matrix):
-        raise TypeError('Each row of the matrix must have the same size')
-    """
-    Checks that div is actually a number.
-
-    """
-    if not isinstance(div, (int, float)):
-        raise TypeError('div must be a number')
-    """
-    Checks that div isn't 0, else an error is thrown.
-    """
-    if div == 0:
-        raise ZeroDivisionError('division by zero')
-    """
-    Returns a new matrix, rounded up to two decimal places.
-
-    """
-
-    return [[round(element / div, 2) for element in row] for row in matrix]
+    """ Divide a matrix by a number div """
+    list_error = "matrix must be a matrix (list of lists) of integers/floats"
+    len_error = "Each row of the matrix must have the same size"
+    div_int_error = "div must be a number"
+    div_zero_error = "division by zero"
+    new_matrix = []
+    new_list = []
+    if not matrix:
+        raise TypeError(list_error)
+    if type(div) is not int and type(div) is not float:
+        raise TypeError(div_int_error)
+    if div is 0:
+        raise ZeroDivisionError(div_zero_error)
+    longitud = len(matrix[0])
+    for lista in matrix:
+        if type(lista) is not list:
+            raise TypeError(list_error)
+        if len(lista) != longitud:
+            raise TypeError(len_error)
+        for item in lista:
+            if type(item) is not int and type(item) is not float:
+                raise TypeError(list_error)
+            num = item / div
+            new_list.append(round(num, 2))
+        new_matrix.append(new_list)
+        new_list = []
+    return new_matrix
