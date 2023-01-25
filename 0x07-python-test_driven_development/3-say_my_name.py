@@ -19,4 +19,4 @@ def say_my_name(first_name, last_name=""):
     Returns a sentence containing both first and last name.
 
     """
-    return ('My name is {} {}'.format(first_name, last_name))
+    return ("My name is {} {}".format(first_name, last_name))
