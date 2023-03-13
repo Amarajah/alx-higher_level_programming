@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 if (process.argv.length === 2) {
     console.log('undefined is undefined');
 } else if (process.argv.length === 3) {
