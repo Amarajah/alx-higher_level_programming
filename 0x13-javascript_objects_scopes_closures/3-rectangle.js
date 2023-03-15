@@ -8,14 +8,14 @@ module.exports = class Rectangle {
     }
   }
 
-print() {
+  print () {
     let row = '';
     for (let i = 0; i < this.width; i++) {
-        row += 'X';
+      row += 'X';
     }
 
     for (let j = 0; j < this.height; j++) {
-        console.log(row);
+      console.log(row);
     }
-}
+  }
 };
