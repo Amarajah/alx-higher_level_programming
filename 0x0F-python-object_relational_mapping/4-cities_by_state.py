@@ -20,11 +20,10 @@ if __name__ == '__main__':
     '''Create cursor for operate over DB'''
     myCursor = mydb.cursor()
 
-    '''Write an sql query to get list of cities'''
-    sql = "select * from cities order by cities.id asc"
-
     '''pass and execute a SQL sentence'''
-    myCursor.execute(sql)
+    myCursor.execute("select cities.id, cities.name, states.name  from cities \
+                      inner join states on cities.state_id = states.id\
+                      order by 1")
 
     '''retrive records and fill cursor'''
     cities = myCursor.fetchall()
