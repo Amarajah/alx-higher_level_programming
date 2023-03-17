@@ -32,9 +32,9 @@ if __name__ == '__main__':
     '''retrive records and fill cursor'''
     cities = myCursor.fetchall()
 
-    '''Print rows'''
-    for city in cities:
-        print(city)
+    '''Print rows with comma separation'''
+    C = ", ".join(city[0] for city in cities)
+    print(C)
 
     '''close cursor'''
     myCursor.close()
