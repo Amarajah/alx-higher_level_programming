@@ -23,6 +23,6 @@ if __name__ == '__main__':
     new_state = State(name='Louisiana')
     session.add(new_state)
     session.commit()
- 
+
     '''Print the id of the new State object'''
     print('{}'.format(new_state.id))
