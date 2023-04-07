@@ -17,4 +17,4 @@ with urllib.request.urlopen(my_url, mail) as response:
     '''Read and decode response as UTF-8'''
     response_body = response.read().decode('utf-8')
     '''Print the response body'''
-    print(response_body)
+    print(f"Your email is: {response_body}")
