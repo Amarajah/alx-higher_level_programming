@@ -5,9 +5,10 @@ Write a Python script that takes in a URL, sends a request to the URL and displa
 import sys
 import urllib.request
 
+if __name__ == "__main__":
+    my_url = sys.argv[1]
 
-my_url = sys.argv[1]
-
-with urllib.request.urlopen(my_url) as response:
-    requested_id = response.getheader('X-Request-Id')
-    print(f"{requested_id}")
+    request = urllib.request.Request(my_url)
+    with urllib.request.urlopen(request) as response:
+        requested_id = response.getheader('X-Request-Id')
+        print(f"{requested_id}")
