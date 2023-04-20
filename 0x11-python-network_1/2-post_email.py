@@ -13,6 +13,7 @@ if __name__ == '__main__':
     output = {}
     output['email'] = sys.argv[2]
     data = urllib.parse.urlencode(output)
+    '''Encode the data value.'''
     data = data.encode()
 
     request = urllib.request.Request(url, data=data, method='POST')
