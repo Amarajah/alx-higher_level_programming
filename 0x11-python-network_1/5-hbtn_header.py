@@ -3,8 +3,8 @@
 sends a request to the URL and displays
 the value of the variable X-Request-Id in the response header'''
 
-from sys import argv
-from requests import get
+import sys
+import requests
 
 
 if __main__ == '__name__':
