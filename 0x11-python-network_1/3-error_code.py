@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-# manage urllib.error.HTTPError exceptions and
-# print: Error code: followed by the HTTP status code
+''' Manage urllib.error.HTTPError exceptions and
+print: Error code: followed by the HTTP status code'''
 
 if __name__ == "__main__":
     import sys
