@@ -8,4 +8,7 @@ from requests import get
 
 
 if __main__ == '__name__':
-    print(get(argv[1]).headers.get('X-Request-Id'))
+    url = sys.argv[1]
+
+    result = requests.get(url)
+    print(result.headers.get('X-Request-Id'))
