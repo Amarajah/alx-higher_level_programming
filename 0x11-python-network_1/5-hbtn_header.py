@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-'''Script giving the value of the variable X-Request-Id in the response header'''
+'''
+Script giving the value of the variable X-Request-Id in the response header
+'''
 
 import sys
 import requests
