@@ -5,7 +5,7 @@ import sys
 import requests
 
 
-if __main__ == '__name__':
+if __name__ == '__main__':
     url = sys.argv[1]
     '''Using the get funcction, get the header'''
 
