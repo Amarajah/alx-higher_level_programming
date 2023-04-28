@@ -10,11 +10,11 @@ import requests
 if __name__ == '__main__':
     url = 'http://0.0.0.0:5000/search_user'
     if len(sys.argv) > 1:
-        value = sys.argv[1]
+        letter = sys.argv[1]
     else:
-        value = ""
+        letter = ""
 
-    payload = {'a': value}
+    payload = {'q': letter}
     r = requests.post(url, data=payload)
 
     try:
