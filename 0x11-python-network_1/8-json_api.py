@@ -18,7 +18,7 @@ if __name__ == '__main__':
     r = requests.post(url, data=payload)
 
     try:
-        json = r.json
+        json = r.json()
         if len(json) > 0:
             print("[{}] {}".format(json.get('id'), json.get('name')))
         else:
