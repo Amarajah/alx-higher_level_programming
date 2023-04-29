@@ -13,6 +13,6 @@ if __name__ == '__main__':
         user = sys.argv[1]
         pwd = sys.argv[2]
 
-    r = request.get(url, auth=(user, pwd))
+    r = requests.get(url, auth=(user, pwd))
     json = r.json()
     print("{}".format(json.get('id')))
